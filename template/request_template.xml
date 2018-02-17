@@ -1,0 +1,11 @@
+<s11:Envelope xmlns:s11='http://schemas.xmlsoap.org/soap/envelope/'>
+  <s11:Body>
+    <sch:getMessageRequest xmlns:sch='http://ff.it/Message'>
+      <sch:message>
+        <sch:environment>AAA</sch:environment>
+        <sch:datetime>123</sch:datetime>
+        <sch:msgId>q1w2e3</sch:msgId>
+      </sch:message>
+    </sch:getMessageRequest>
+  </s11:Body>
+</s11:Envelope>
