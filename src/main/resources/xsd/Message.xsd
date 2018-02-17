@@ -1,0 +1,35 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ff.it/Message"
+	xmlns:tns="http://ff.it/Message" elementFormDefault="qualified">
+
+	<xs:element name="getMessageRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="message" type="tns:message" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+    <xs:element name="getMessageResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="response" type="tns:response" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    
+    <xs:complexType name="message">
+		<xs:sequence>
+			<xs:element name="environment" type="xs:string"/>
+			<xs:element name="datetime" type="xs:string"/>
+			<xs:element name="msgId" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="response">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="msg" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
